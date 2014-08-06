@@ -1,5 +1,6 @@
 var marked = require('marked')
 var chalk = require('chalk')
+var highlight = require('cardinal').highlight // only JS
 
 var renderer = new marked.Renderer()
 
@@ -18,7 +19,7 @@ var c = {
 // Block Level
 
 renderer.heading = function (text, level) {
-  return c.syntax(Array(level + 1).join('#')) + ' ' + c.heading(text) + '\n'
+  return c.syntax(Array(level + 1).join('#')) + ' ' + c.heading(text) + '\n\n'
 }
 
 renderer.hr = function () {
@@ -26,11 +27,11 @@ renderer.hr = function () {
 }
 
 renderer.paragraph = function (text) {
-  return '\n' + text + '\n'
+  return text + '\n\n'
 }
 
 renderer.list = function (body, ordererd) {
-  return '\n' + body 
+  return body  + '\n\n'
 }
 
 renderer.listitem = function (text, test) {
@@ -42,9 +43,11 @@ renderer.blockquote = function (quote) {
   return c.quote(quote)
 }
 
-// TODO
-renderer.code = function (code, language) {
-  return  '\n' + code + '\n'
+renderer.code = function (code, l) {
+  // Right now every code is treated like Javascript
+  if(l == 'js' || l === 'javascript')
+      code = highlight(code)
+  return  code + '\n\n'
 }
 
 

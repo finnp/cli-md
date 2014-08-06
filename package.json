@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Markdown for your terminal",
   "main": "index.js",
+  "bin": {
+    "cli-md": "./cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +24,9 @@
   },
   "homepage": "https://github.com/finnp/cli-md",
   "dependencies": {
+    "cardinal": "^0.4.4",
     "chalk": "^0.5.1",
+    "concat-stream": "^1.4.6",
     "marked": "^0.3.2"
   }
 }

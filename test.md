@@ -19,7 +19,7 @@ Paragraphs are separated by a blank line.
 
 
 -----
-```js
+```javascript
   console.log('test')
 ```
 
