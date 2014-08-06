@@ -1,0 +1,27 @@
+{
+  "name": "cli-md",
+  "version": "0.0.0",
+  "description": "Markdown for your terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/finnp/cli-md.git"
+  },
+  "keywords": [
+    "markdown",
+    "terminal"
+  ],
+  "author": "Finn Pauls",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/finnp/cli-md/issues"
+  },
+  "homepage": "https://github.com/finnp/cli-md",
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "marked": "^0.3.2"
+  }
+}
