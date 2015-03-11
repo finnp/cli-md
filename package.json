@@ -7,7 +7,7 @@
     "cli-md": "./cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node example.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,10 @@
     "cardinal": "^0.4.4",
     "chalk": "^0.5.1",
     "concat-stream": "^1.4.6",
-    "marked": "^0.3.2"
+    "marked": "^0.3.2",
+    "marked-terminal": "^1.2.0"
+  },
+  "devDependencies": {
+    "markdown-cheatsheet": "^1.0.0"
   }
 }
