@@ -5,5 +5,5 @@ var concat = require('concat-stream')
 var md = require('./')
 
 process.stdin.pipe(concat(function (markdown) {
-  console.log(md(markdown.toString()))
+  process.stdout.write(md(markdown.toString()))
 }))
