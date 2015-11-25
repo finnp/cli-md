@@ -20,4 +20,3 @@ marked.setOptions({
 })
 
 module.exports = marked
-
