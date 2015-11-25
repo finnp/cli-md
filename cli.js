@@ -2,19 +2,15 @@
 var fs = require('fs')
 var concat = require('concat-stream')
 
+var md = require('./')
+
+var input = process.argv.length > 2
+      ? fs.createReadStream(process.argv[2])
+      : process.stdin
+
 // Force colors for chalk.
 process.argv.push('--color')
 
-var md = require('./')
-var filepath = process.argv[2]
-var readStream
-
-if (filepath) {
-  readStream = fs.createReadStream(filepath)
-} else {
-  readStream = process.stdin
-}
-
-readStream.pipe(concat(function (markdown) {
+input.pipe(concat(function (markdown) {
   process.stdout.write(md(markdown.toString()))
 }))
