@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/finnp/cli-md",
   "dependencies": {
-    "cardinal": "^0.4.4",
     "chalk": "^0.5.1",
     "concat-stream": "^1.4.6",
     "marked": "^0.3.2",
