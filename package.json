@@ -24,10 +24,10 @@
   },
   "homepage": "https://github.com/finnp/cli-md",
   "dependencies": {
-    "chalk": "^0.5.1",
-    "concat-stream": "^1.4.6",
-    "marked": "^0.3.2",
-    "marked-terminal": "^1.2.0"
+    "chalk": "^2.4.2",
+    "concat-stream": "^2.0.0",
+    "marked": "^0.6.0",
+    "marked-terminal": "^3.2.0"
   },
   "devDependencies": {
     "markdown-cheatsheet": "^1.0.0"
